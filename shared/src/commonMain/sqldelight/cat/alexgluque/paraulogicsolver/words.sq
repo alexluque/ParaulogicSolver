@@ -1,0 +1,10 @@
+CREATE TABLE words (
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    word TEXT NOT NULL
+);
+
+getWordsStartingWith:
+SELECT * FROM words WHERE word LIKE (:letter || '%');
+
+insert:
+INSERT INTO words (word) VALUES (?);
